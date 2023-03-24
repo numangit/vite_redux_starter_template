@@ -7,4 +7,5 @@ export const store = configureStore({
     },
     middleware: (getDefaultMiddlewares) =>
         getDefaultMiddlewares().concat(apiSlice.middleware),
+    devTools: import.meta.env.MODE === 'development',
 });
